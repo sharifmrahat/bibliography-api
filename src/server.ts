@@ -1,8 +1,9 @@
 import app from "./app";
+import config from "./config";
 
 async function main() {
-  app.listen(process.env.PORT, () => {
-    console.log(`Server running port: ${process.env.PORT}`);
+  app.listen(config.PORT, () => {
+    console.log(`Server is running on port: ${config.PORT}`);
   });
 }
 
