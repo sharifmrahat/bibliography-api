@@ -11,9 +11,9 @@
 ### User
 - api/v1/auth/signup (POST)
 - api/v1/users (GET)
-- api/v1/users/8e4a31de-9ead-4a55-986d-eee6fece27d3 (Single GET) 
-- api/v1/users/949f80a7-e8d2-4dc5-8bb7-f523a27971c7 (PATCH)
-- api/v1/users/949f80a7-e8d2-4dc5-8bb7-f523a27971c7 (DELETE) 
+- api/v1/users/e3d2bcad-a307-4f37-afcd-e0fe9adf7336 (Single GET) 
+- api/v1/users/67250f2e-d3a6-468f-924c-8485427e5a51 (PATCH)
+- api/v1/users/67250f2e-d3a6-468f-924c-8485427e5a51 (DELETE) 
 - api/v1/profile (GET)
 
 
@@ -21,21 +21,21 @@
 ### Category
 - api/v1/categories/create-category (POST)
 - api/v1/categories (GET)
-- api/v1/categories/85940918-ec4f-4be5-8a17-0f4502dd94ab (Single GET)
-- api/v1/categories/9d526e87-d134-43cc-b9ff-cb1a76e45242 (PATCH)
-- api/v1/categories/d8919386-ffdf-4786-a48a-01238ecfb793 (DELETE) 
+- api/v1/categories/a2acae30-1582-4f7a-8b59-172f8bf1b6ea (Single GET)
+- api/v1/categories/dce50f7f-ad4f-41a6-8fd3-528cd603add8 (PATCH)
+- api/v1/categories/7af7b0b1-1439-45e5-96ce-2ce301cb8656 (DELETE) 
 
 
 ### Books
 - api/v1/books/create-book (POST)
 - api/v1/books (GET)
-- api/v1/books/097c3e56-55ef-4d5b-8c96-e68c38425265/category (GET)
-- api/v1/books/bdd27b22-0d8d-4c41-82f6-35fd15e1aa5d (GET)
-- api/v1/books/bdd27b22-0d8d-4c41-82f6-35fd15e1aa5d (PATCH)
-- api/v1/books/8653b047-34fb-470d-9dff-ae41bee48478 (DELETE)
+- api/v1/books/d411e702-72bb-4070-97b3-e27ca8783bb8/category (GET)
+- api/v1/books/d411e702-72bb-4070-97b3-e27ca8783bb8 (GET)
+- api/v1/books/6fec836d-abdf-42fc-9437-857ee8c149af (PATCH)
+- api/v1/books/71b999cf-8c8c-491a-8d4d-1fcd70694560 (DELETE)
 
 
 ### Orders
 - api/v1/orders/create-order (POST)
 - api/v1/orders (GET)
-- api/v1/orders/b216a7b0-7bce-4594-b5e0-34a1db4d82f1 (GET)
+- api/v1/orders/267936ce-86be-4d00-9649-458c62834141 (GET)

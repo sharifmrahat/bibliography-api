@@ -4,7 +4,6 @@ import httpStatus from "http-status";
 import globalErrorHandler from "./app/middlewares/global-error";
 import { AppRouter } from "./routes";
 import responseData from "./shared/response";
-import config from "./config";
 
 const app = express();
 
@@ -21,7 +20,7 @@ app.use(globalErrorHandler);
 app.get("/", (req, res) => {
   return res.status(httpStatus.OK).json({
     success: true,
-    message: `Server is running on port: ${config.PORT}`,
+    message: `Bibliography app is running`,
   });
 });
 
