@@ -4,6 +4,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.JwtHelpers = void 0;
+const http_status_1 = __importDefault(require("http-status"));
+const api_error_1 = __importDefault(require("../app/error/api-error"));
 const config_1 = __importDefault(require("../config"));
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
 const generateToken = (data) => {
@@ -13,8 +15,13 @@ const generateToken = (data) => {
     return token;
 };
 const verifyToken = (token) => {
-    const decoded = jsonwebtoken_1.default.verify(token, config_1.default.JWT_SECRET_ACCESS);
-    return decoded;
+    if (token) {
+        const decoded = jsonwebtoken_1.default.verify(token, config_1.default.JWT_SECRET_ACCESS);
+        return decoded;
+    }
+    else {
+        throw new api_error_1.default(http_status_1.default.FORBIDDEN, "Forbidden Access!");
+    }
 };
 exports.JwtHelpers = {
     generateToken,

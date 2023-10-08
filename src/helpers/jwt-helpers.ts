@@ -1,5 +1,3 @@
-import httpStatus from "http-status";
-import ApiError from "../app/error/api-error";
 import config from "../config";
 import jwt, { Secret } from "jsonwebtoken";
 
@@ -11,12 +9,8 @@ const generateToken = (data: Record<string, unknown>) => {
 };
 
 const verifyToken = (token: string) => {
-  if (token) {
-    const decoded = jwt.verify(token, config.JWT_SECRET_ACCESS as Secret);
-    return decoded;
-  } else {
-    throw new ApiError(httpStatus.FORBIDDEN, "Forbidden Access!");
-  }
+  const decoded = jwt.verify(token, config.JWT_SECRET_ACCESS as Secret);
+  return decoded;
 };
 
 export const JwtHelpers = {

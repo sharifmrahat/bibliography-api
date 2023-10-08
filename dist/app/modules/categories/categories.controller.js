@@ -19,18 +19,18 @@ const categories_service_1 = require("./categories.service");
 const insertCategory = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const category = req.body;
     const result = yield categories_service_1.CategoryService.insertCategory(category);
-    return (0, response_1.default)({ message: "Category inserted  successfully", result }, res);
+    return (0, response_1.default)({ message: "Category added successfully", result }, res);
 }));
 const updateCategory = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const id = req.params.id;
     const data = req.body;
     const result = yield categories_service_1.CategoryService.updateCategory(id, data);
-    return (0, response_1.default)({ message: "Category updated  successfully", result }, res);
+    return (0, response_1.default)({ message: "Category updated successfully", result }, res);
 }));
 const deleteCategory = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const id = req.params.id;
     const result = yield categories_service_1.CategoryService.deleteCategory(id);
-    return (0, response_1.default)({ message: "Category deleted  successfully", result }, res);
+    return (0, response_1.default)({ message: "Category deleted successfully", result }, res);
 }));
 const findOneCategory = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const id = req.params.id;

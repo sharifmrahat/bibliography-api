@@ -21,14 +21,14 @@ const signup = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, void 0,
     const result = yield auth_service_1.AuthService.signUp(user);
     return (0, response_1.default)({
         result,
-        message: "User created successfully!",
+        message: "User singed up successfully!",
     }, res);
 }));
 const signIn = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const userCredential = req.body;
     const result = yield auth_service_1.AuthService.signIn(userCredential);
     return (0, response_1.default)({
-        message: "User signin successfully!",
+        message: "User logged in successfully!",
         token: result,
     }, res);
 }));

@@ -20,18 +20,18 @@ const books_service_1 = require("./books.service");
 const insertBook = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const book = req.body;
     const result = yield books_service_1.BookService.insertBook(book);
-    return (0, response_1.default)({ message: "Book inserted  successfully", result }, res);
+    return (0, response_1.default)({ message: "Book added successfully", result }, res);
 }));
 const updateBook = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const id = req.params.id;
     const data = req.body;
     const result = yield books_service_1.BookService.updateBook(id, data);
-    return (0, response_1.default)({ message: "Book updated  successfully", result }, res);
+    return (0, response_1.default)({ message: "Book updated successfully", result }, res);
 }));
 const deleteBook = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const id = req.params.id;
     const result = yield books_service_1.BookService.deleteBook(id);
-    return (0, response_1.default)({ message: "Book deleted  successfully", result }, res);
+    return (0, response_1.default)({ message: "Book deleted successfully", result }, res);
 }));
 const findOneBook = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const id = req.params.id;

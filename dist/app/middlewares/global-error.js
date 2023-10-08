@@ -9,7 +9,7 @@ const handle_client_error_1 = __importDefault(require("../error/handle-client-er
 const api_error_1 = __importDefault(require("../error/api-error"));
 const globalErrorHandler = (error, req, res, next) => {
     let statusCode = 500;
-    let message = "Something went wrong !";
+    let message = "Something went wrong!";
     let errorMessages = [];
     if (error instanceof client_1.Prisma.PrismaClientValidationError) {
         const simplifiedError = (0, handle_validation_error_1.default)(error);

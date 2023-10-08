@@ -9,7 +9,6 @@ const http_status_1 = __importDefault(require("http-status"));
 const global_error_1 = __importDefault(require("./app/middlewares/global-error"));
 const routes_1 = require("./routes");
 const response_1 = __importDefault(require("./shared/response"));
-const config_1 = __importDefault(require("./config"));
 const app = (0, express_1.default)();
 app.use((0, cors_1.default)());
 app.use(express_1.default.json());
@@ -21,7 +20,7 @@ app.use(global_error_1.default);
 app.get("/", (req, res) => {
     return res.status(http_status_1.default.OK).json({
         success: true,
-        message: `Server is running on port: ${config_1.default.PORT}`,
+        message: `Bibliography app is running`,
     });
 });
 //route not found

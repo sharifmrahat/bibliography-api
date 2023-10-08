@@ -18,7 +18,7 @@ const auth = (...roles) => {
             req.user = user;
             if (roles === null || roles === void 0 ? void 0 : roles.length) {
                 if (!user.role || !roles.includes(user.role)) {
-                    throw new api_error_1.default(http_status_1.default.FORBIDDEN, "Forbidden!");
+                    throw new api_error_1.default(http_status_1.default.FORBIDDEN, "Forbidden Access!");
                 }
             }
             next();

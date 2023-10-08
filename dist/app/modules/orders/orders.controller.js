@@ -20,7 +20,7 @@ const insertOrder = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, vo
     const order = req.body;
     const user = req.user;
     const result = yield orders_service_1.OrderService.insertOrder(Object.assign(Object.assign({}, order), { userId: user.userId }));
-    return (0, response_1.default)({ message: "Order created successfully", result }, res);
+    return (0, response_1.default)({ message: "Order placed successfully", result }, res);
 }));
 const findOneOrder = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const id = req.params.id;

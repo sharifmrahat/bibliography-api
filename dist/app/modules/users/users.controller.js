@@ -19,13 +19,13 @@ const users_service_1 = require("./users.service");
 const insertUser = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const user = req.body;
     const result = yield users_service_1.UserService.insertUser(user);
-    return (0, response_1.default)({ message: "User inserted  successfully", result }, res);
+    return (0, response_1.default)({ message: "User added successfully", result }, res);
 }));
 const updateUser = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const id = req.params.id;
     const data = req.body;
     const result = yield users_service_1.UserService.updateUser(id, data);
-    return (0, response_1.default)({ message: "User updated  successfully", result }, res);
+    return (0, response_1.default)({ message: "User updated successfully", result }, res);
 }));
 const deleteUser = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const id = req.params.id;
