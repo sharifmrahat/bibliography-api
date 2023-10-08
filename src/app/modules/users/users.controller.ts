@@ -7,7 +7,7 @@ const insertUser = catchAsync(async (req, res) => {
 
   const result = await UserService.insertUser(user);
 
-  return responseData({ message: "User inserted  successfully", result }, res);
+  return responseData({ message: "User added successfully", result }, res);
 });
 
 const updateUser = catchAsync(async (req, res) => {
@@ -16,7 +16,7 @@ const updateUser = catchAsync(async (req, res) => {
 
   const result = await UserService.updateUser(id, data);
 
-  return responseData({ message: "User updated  successfully", result }, res);
+  return responseData({ message: "User updated successfully", result }, res);
 });
 
 const deleteUser = catchAsync(async (req, res) => {

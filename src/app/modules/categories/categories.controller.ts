@@ -7,10 +7,7 @@ const insertCategory = catchAsync(async (req, res) => {
 
   const result = await CategoryService.insertCategory(category);
 
-  return responseData(
-    { message: "Category inserted  successfully", result },
-    res
-  );
+  return responseData({ message: "Category added successfully", result }, res);
 });
 
 const updateCategory = catchAsync(async (req, res) => {
@@ -20,7 +17,7 @@ const updateCategory = catchAsync(async (req, res) => {
   const result = await CategoryService.updateCategory(id, data);
 
   return responseData(
-    { message: "Category updated  successfully", result },
+    { message: "Category updated successfully", result },
     res
   );
 });
@@ -31,7 +28,7 @@ const deleteCategory = catchAsync(async (req, res) => {
   const result = await CategoryService.deleteCategory(id);
 
   return responseData(
-    { message: "Category deleted  successfully", result },
+    { message: "Category deleted successfully", result },
     res
   );
 });

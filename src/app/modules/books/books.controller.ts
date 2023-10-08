@@ -8,7 +8,7 @@ const insertBook = catchAsync(async (req, res) => {
 
   const result = await BookService.insertBook(book);
 
-  return responseData({ message: "Book inserted  successfully", result }, res);
+  return responseData({ message: "Book added successfully", result }, res);
 });
 
 const updateBook = catchAsync(async (req, res) => {
@@ -17,7 +17,7 @@ const updateBook = catchAsync(async (req, res) => {
 
   const result = await BookService.updateBook(id, data);
 
-  return responseData({ message: "Book updated  successfully", result }, res);
+  return responseData({ message: "Book updated successfully", result }, res);
 });
 
 const deleteBook = catchAsync(async (req, res) => {
@@ -25,7 +25,7 @@ const deleteBook = catchAsync(async (req, res) => {
 
   const result = await BookService.deleteBook(id);
 
-  return responseData({ message: "Book deleted  successfully", result }, res);
+  return responseData({ message: "Book deleted successfully", result }, res);
 });
 
 const findOneBook = catchAsync(async (req, res) => {

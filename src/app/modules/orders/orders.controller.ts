@@ -12,7 +12,7 @@ const insertOrder = catchAsync(async (req, res) => {
     userId: user.userId,
   });
 
-  return responseData({ message: "Order created successfully", result }, res);
+  return responseData({ message: "Order placed successfully", result }, res);
 });
 
 const findOneOrder = catchAsync(async (req, res) => {

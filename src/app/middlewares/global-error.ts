@@ -13,7 +13,7 @@ const globalErrorHandler: ErrorRequestHandler = (
   next: NextFunction
 ) => {
   let statusCode = 500;
-  let message = "Something went wrong !";
+  let message = "Something went wrong!";
   let errorMessages: IGenericErrorMessage[] = [];
 
   if (error instanceof Prisma.PrismaClientValidationError) {
